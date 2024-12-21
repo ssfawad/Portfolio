@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../components/Button";
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false)
@@ -50,7 +51,7 @@ const About = () => {
                 <div>
                     <p className="grid-headtext">I work remotely across different Time Zones</p>
                     <p className="grid-subtext">I am based in Canada with remote work available</p>
-                    {/* <Button name="Contact Me" isBean containerClass="w-full mt-10"/> */}
+                    <Button name="Contact Me" isBean containerClass="w-full mt-10"/>
                 </div>
             </div>
         </div>
