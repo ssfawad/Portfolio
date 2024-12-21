@@ -6,6 +6,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants/data";
+import Target from "../components/Target";
 
 const Hero = () => {
   const controls = useControls("Room", {
@@ -77,7 +78,7 @@ const Hero = () => {
               />
 
               <group>
-                
+                {/* <Target position={sizes.targetPosition}/> */}
               </group>
               <ambientLight intensity={1} />
               <directionalLight position={[10, 10, 10]} intensity={0.5} />
