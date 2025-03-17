@@ -8,83 +8,82 @@ import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants/data";
 import Target from "../components/Target";
 
-const Hero = () => {
-  const controls = useControls("Room", {
-    positionX: {
-      value: 2.5,
-      min: -10,
-      max: 10,
-    },
-    positionY: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      positionZ: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      rotationX: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      rotationY: {
-          value: 2.5,
-          min: -10,
-          max: 10,
-        },
-        rotationZ: {
-          value: 2.5,
-          min: -10,
-          max: 10,
-        },
-        scale: {
-            value: 2.5,
-            min: -10,
-            max: 10,
-          },
-  });
+import { LinearGradient } from "react-text-gradients";
+import { SocialIcon } from "react-social-icons/component";
+import "react-social-icons/instagram";
+import "react-social-icons/github";
+import "react-social-icons/linkedin";
+import "react-social-icons/facebook";
 
-  const isSmall = useMediaQuery({maxWidth: 440})
-  const isMobile = useMediaQuery({maxWidth: 768});
-  const isTablet = useMediaQuery({minWidth: 768, maxWidth: 1024})
-  
-  const sizes = calculateSizes(isSmall, isMobile, isTablet)
+// const Hero = () => {
+//   return (
+//     <>
+//       <section className="flex flex-row max-w-7xl bg-slate-500">
+//         <div className="flex flex-col gap-2 justify-center font-medium text-white">
+//           <h1 className="hello">Hello,</h1>
+//           <span className="heroText">
+//             I'm{" "}
+//             <span className="heroName">
+//               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
+//                 Anzhelika
+//               </LinearGradient>
+//             </span>
+//             <br /> Software Developer
+//           </span>
+//           <p className="heroDesc">
+//             Specializing in C#, Unity, and web technologies. Passionate about
+//             creating
+//             <br /> interactive web solutions and immersive Unity experiences.
+//           </p>
+
+//         </div>
+//         <div className="heroImage">
+//           <img src={avatar} alt="Profile" className="heroBg" />
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default Hero;
+
+const Hero = () => {
   return (
     <>
-      <section className="min-h-screen w-full flex flex-col relative">
-        <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-          <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
-            Hi, I am Anzhelika <span>🍔</span>
+      <section className="min-h-screen w-full flex flex-col relative items-center justify-center">
+        <div className="max-w-7xl mx-auto flex flex-col c-space gap-3 items-center">
+          <p className="sm:text-3xl text-2xl font-medium text-white text-center">
+            Hi, I am{" "}
+            <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
+              Anzhelika
+            </LinearGradient>
           </p>
-          <p className="hero_tag text-gray_gradient">Frontend Developer</p>
+          <p className="text-center text-white xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal">
+            Software Developer
+          </p>
+          <p className="max-w-4xl text-center justify-center text-white">
+            I'm a passionate software developer with expertise in web and game
+            development using JavaScript, TypeScript, C#, and Unity. I build
+            interactive experiences and web applications, leveraging both
+            front-end and back-end technologies. With a strong focus on clean
+            code, collaboration, and continuous learning, I strive to create
+            innovative solutions that enhance user experiences.
+          </p>
         </div>
-        <div className="w-full h-full absolute inset-0">
-        {/* <Leva /> */}
-          <Canvas className="w-full h-full">
-            <Suspense fallback={<CanvasLoader />}>
-              <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-              <Room
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0, -Math.PI, 0]}
-/*                 position={[controls.positionX, controls.positionY, controls.positionZ]}
-                rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
-                scale={[controls.scale, controls.scale,
-                    controls.scale
-                ]} */
-              />
-
-              <group>
-                {/* <Target position={sizes.targetPosition}/> */}
-              </group>
-              <ambientLight intensity={1} />
-              <directionalLight position={[10, 10, 10]} intensity={0.5} />
-              
-            </Suspense>
-          </Canvas>
+        <div className="flex flex-row gap-2 justify-center mt-5 max-w-7xl">
+          <SocialIcon
+            className="heroIcon"
+            url="https://www.instagram.com/a_akcio/?hl=en"
+          />
+          <SocialIcon className="heroIcon" url="https://github.com/A-coderr" />
+          <SocialIcon
+            className="heroIcon"
+            url="https://www.facebook.com/profile.php?id=100011369881132"
+          />
+          <SocialIcon
+            className="heroIcon"
+            url="http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194"
+          />
         </div>
       </section>
     </>

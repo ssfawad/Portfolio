@@ -95,7 +95,7 @@ const WordSphere = () => {
 
 const SkillsSphere = () => {
   return (
-    <div>
+    <div className="bg-yellow-300">
       <Canvas
         camera={{ position: [0, 0, 15], fov: 60 }}
         style={{ width: "100vw", height: "100vh" }}
