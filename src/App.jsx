@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import SkillsSphere from "./components/SkillsSphere";
 import Hero from "./sections/Hero";
+import Experience from "./sections/Experience";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Navbar />
       <Hero />
       {/* <SkillsSphere /> */}
+      <Experience />
     </>
   );
 }
