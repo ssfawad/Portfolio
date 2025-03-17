@@ -1,51 +1,9 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera } from "@react-three/drei";
-import Room from "../components/Room";
-import CanvasLoader from "../components/CanvasLoader";
-import { Leva, useControls } from "leva";
-import { useMediaQuery } from "react-responsive";
-import { calculateSizes } from "../constants/data";
-import Target from "../components/Target";
-
 import { LinearGradient } from "react-text-gradients";
 import { SocialIcon } from "react-social-icons/component";
 import "react-social-icons/instagram";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 import "react-social-icons/facebook";
-
-// const Hero = () => {
-//   return (
-//     <>
-//       <section className="flex flex-row max-w-7xl bg-slate-500">
-//         <div className="flex flex-col gap-2 justify-center font-medium text-white">
-//           <h1 className="hello">Hello,</h1>
-//           <span className="heroText">
-//             I'm{" "}
-//             <span className="heroName">
-//               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
-//                 Anzhelika
-//               </LinearGradient>
-//             </span>
-//             <br /> Software Developer
-//           </span>
-//           <p className="heroDesc">
-//             Specializing in C#, Unity, and web technologies. Passionate about
-//             creating
-//             <br /> interactive web solutions and immersive Unity experiences.
-//           </p>
-
-//         </div>
-//         <div className="heroImage">
-//           <img src={avatar} alt="Profile" className="heroBg" />
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default Hero;
 
 const Hero = () => {
   return (
@@ -67,9 +25,9 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whit
           </p>
 
           <p className="max-w-4xl text-center justify-center text-white xl:text-xl md:text-lg sm:text-sm text-md">
-            I'm a passionate software developer with expertise in web and game
-            development using JavaScript, TypeScript, C#, and Unity. I build
-            interactive experiences and web applications, leveraging both
+            I&apos;m a passionate software developer with expertise in web and
+            game development using JavaScript, TypeScript, C#, and Unity. I
+            build interactive experiences and web applications, leveraging both
             front-end and back-end technologies. With a strong focus on clean
             code, collaboration, and continuous learning, I strive to create
             innovative solutions that enhance user experiences.
