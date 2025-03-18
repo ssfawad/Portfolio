@@ -5,37 +5,31 @@ import * as THREE from "three";
 import PropTypes from "prop-types";
 
 const words = [
-  "React",
+  "ReactJS",
   "Three.js",
-  "Fiber",
   "JavaScript",
   "TypeScript",
+  "C#",
+  "Unity",
+  "Python",
+  "HTML5",
+  "CSS3",
+  "Node.js",
+  "Express.js",
+  "Git",
+  "MongoDB",
+  "Azure",
+  "Atlassian suite",
+  "MySQL",
+  "Scrum",
+  "Agile",
   "3D",
-  "WebGL",
-  "Animation",
-  "Shaders",
-  "Performance",
-  "Design",
-  "User Experience",
-  "User Interface",
-  "Accessibility",
-  "Collaboration",
-  "Teamwork",
-  "Problem Solving",
-  "Critical Thinking",
-  "Communication",
-  "Time Management",
-  "Leadership",
-  "Creativity",
-  "Problem Solving",
-  "Critical Thinking",
-  "Communication",
-  "Time Management",
-  "Leadership",
-  "Creativity",
-  "Problem Solving",
-  "Critical Thinking",
-  "Communication",
+  "GitHub",
+  "Web",
+  "React Three Fiber",
+  "Rapier",
+  "Drei",
+  "Redux",
 ];
 
 const Word = ({ children, position }) => {
@@ -52,8 +46,8 @@ const Word = ({ children, position }) => {
     <Text
       ref={textRef}
       position={position}
-      fontSize={0.4}
-      color={hovered ? "orange" : "white"}
+      fontSize={0.5}
+      color={hovered ? "#fc0865" : "white"}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
@@ -70,7 +64,7 @@ Word.propTypes = {
 const WordSphere = () => {
   const groupRef = useRef();
 
-  const radius = 3;
+  const radius = 5;
   const wordPositions = words.map((word, i) => {
     const phi = Math.acos(-1 + (2 * i) / words.length);
     const theta = Math.sqrt(words.length * Math.PI) * phi;
@@ -95,16 +89,14 @@ const WordSphere = () => {
 
 const SkillsSphere = () => {
   return (
-    <div className="bg-yellow-300">
-      <Canvas
-        camera={{ position: [0, 0, 15], fov: 60 }}
-        style={{ width: "100vw", height: "100vh" }}
-      >
-        <ambientLight intensity={0.5} />
-        <WordSphere />
-        <OrbitControls enablePan={false} enableZoom={false} />
-      </Canvas>
-    </div>
+    <Canvas
+      camera={{ position: [0, 0, 12], fov: 60 }}
+      style={{ width: "100%", height: "80vh" }}
+    >
+      <ambientLight intensity={0.5} />
+      <WordSphere />
+      <OrbitControls enablePan={false} enableZoom={false} />
+    </Canvas>
   );
 };
 
