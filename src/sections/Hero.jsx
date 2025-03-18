@@ -9,7 +9,10 @@ import MouseScroll from "../components/MouseScroll";
 const Hero = () => {
   return (
     <>
-      <section className="min-h-screen w-full flex flex-col relative items-center justify-center">
+      <section
+        className="min-h-screen w-full flex flex-col relative items-center justify-center"
+        id="home"
+      >
         <div className="max-w-7xl mx-auto flex flex-col c-space gap-7 items-center">
           <p className="md:text-5xl sm:text-4xl text-2xl font-medium text-white text-center">
             Hi, I am{" "}

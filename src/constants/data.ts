@@ -11,11 +11,16 @@ export const navLinks = [
   },
   {
     id: 3,
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+    id: 4,
     name: "Projects",
     href: "#projects",
   },
   {
-    id: 4,
+    id: 5,
     name: "Contact",
     href: "#contact",
   },
@@ -129,7 +134,7 @@ export const myProjects = [
     desc: "A Karate Website, developed as part of a college assignment.",
     subdesc:
       "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
-    href: "https://www.youtube.com/watch?v=lEflo_sc82g",
+    href: "https://github.com/A-coderr/Karate_HTML_CSS",
     source: "https://github.com/A-coderr/Karate_HTML_CSS",
     logo: "/assets/project-logo3.png",
     logoStyle: {
