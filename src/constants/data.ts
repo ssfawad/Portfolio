@@ -34,7 +34,7 @@ export const myProjects = [
       "Currently in early development, with plans for level completion, multiplayer, and collectibles.",
     href: "https://a-coderr.github.io/obstacle_course_r3f/",
     source: "https://github.com/A-coderr/obstacle_course_r3f",
-    logo: "/projects/ThreeRun_Main_Screen.png",
+    logo: "projects/ThreeRun_Main_Screen.png",
     logoStyle: {
       backgroundColor: "#2A1816",
       border: "0.2px solid #36201D",
@@ -44,37 +44,37 @@ export const myProjects = [
       {
         id: 1,
         name: "React.js",
-        path: "/icons/react.svg",
+        path: "icons/react.svg",
       },
       {
         id: 2,
         name: "TailwindCSS",
-        path: "/icons/tailwindcss-icon.svg",
+        path: "icons/tailwindcss-icon.svg",
       },
       {
         id: 3,
         name: "TypeScript",
-        path: "/icons/typescript-icon.svg",
+        path: "icons/typescript-icon.svg",
       },
       {
         id: 4,
         name: "Java Script",
-        path: "/icons/javascript.svg",
+        path: "icons/javascript.svg",
       },
       {
         id: 5,
         name: "Three.js",
-        path: "/icons/threejs.svg",
+        path: "icons/threejs.svg",
       },
       {
         id: 6,
         name: "HTML",
-        path: "/icons/html-5.svg",
+        path: "icons/html-5.svg",
       },
       {
         id: 7,
         name: "Redux",
-        path: "/icons/redux.svg",
+        path: "icons/redux.svg",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const myProjects = [
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
     href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
     source: "https://github.com/A-coderr/three_portfolio",
-    logo: "/projects/Portfolio_Main.png",
+    logo: "projects/Portfolio_Main.png",
     logoStyle: {
       backgroundColor: "#13202F",
       border: "0.2px solid #17293E",
@@ -95,37 +95,37 @@ export const myProjects = [
       {
         id: 1,
         name: "React.js",
-        path: "/icons/react.svg",
+        path: "icons/react.svg",
       },
       {
         id: 2,
         name: "TailwindCSS",
-        path: "/icons/tailwindcss-icon.svg",
+        path: "icons/tailwindcss-icon.svg",
       },
       {
         id: 3,
         name: "TypeScript",
-        path: "/icons/typescript-icon.svg",
+        path: "icons/typescript-icon.svg",
       },
       {
         id: 4,
         name: "Java Script",
-        path: "/icons/javascript.svg",
+        path: "icons/javascript.svg",
       },
       {
         id: 5,
         name: "Three.js",
-        path: "/icons/threejs.svg",
+        path: "icons/threejs.svg",
       },
       {
         id: 6,
         name: "HTML",
-        path: "/icons/html-5.svg",
+        path: "icons/html-5.svg",
       },
       {
         id: 7,
         name: "CSS",
-        path: "/icons/css-3.svg",
+        path: "icons/css-3.svg",
       },
     ],
   },
@@ -136,7 +136,7 @@ export const myProjects = [
       "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
     href: "https://github.com/A-coderr/Karate_HTML_CSS",
     source: "https://github.com/A-coderr/Karate_HTML_CSS",
-    logo: "/assets/project-logo3.png",
+    logo: "assets/project-logo3.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
       background:
@@ -148,12 +148,12 @@ export const myProjects = [
       {
         id: 1,
         name: "HTML",
-        path: "/icons/html-5.svg",
+        path: "icons/html-5.svg",
       },
       {
         id: 2,
         name: "CSS",
-        path: "/icons/css-3.svg",
+        path: "icons/css-3.svg",
       },
     ],
   },
@@ -165,7 +165,7 @@ export const workExperiences = [
     company: "Centre for Virtual Reality Innovation - VARLab",
     position: "DLS Software Developer",
     duration: "August 2022 - current",
-    icon: "/varlab_logo.png",
+    icon: "varlab_logo.png",
     duties: [
       "Developed scalable and performant web applications using JavaScript, ReactJS, MongoDB, and ExpressJS.",
       "Contributed to flat screen and VR learning experiences using Unity and C#, optimizing data structures for efficiency.",
@@ -179,7 +179,7 @@ export const workExperiences = [
     company: "Centre for Virtual Reality Innovation - VARLab",
     position: "AR/VR Software Developer (Co-op and Part-Time)",
     duration: "January 2021 - December 2021",
-    icon: "/varlab_logo.png",
+    icon: "varlab_logo.png",
     duties: [
       "Developed interactive 2D and 3D learning experiences in Unity and C#, applying modular, reusable, and scalable development principles. ",
       "Created reusable assets and scripts, improving development speed by 20%.",
@@ -193,7 +193,7 @@ export const workExperiences = [
     company: "Conestoga College",
     position: "Mobile Application Developer (Co-op)",
     duration: "June 2020 - December 2020",
-    icon: "/conestoga_logo.png",
+    icon: "conestoga_logo.png",
     duties: [
       "Developed cross-platform mobile applications with integrated augmented reality (AR) features.",
       "Optimized application performance, increasing speed by 17% and enhancing user engagement by 21%.",

@@ -38,7 +38,7 @@ const ProjectCard = ({ project }) => {
           rel="noreferrer"
         >
           <p className="text-white">Demo</p>
-          <img src="/arrow-up.png" alt="arrow" className="w-3 h-3" />
+          <img src="arrow-up.png" alt="arrow" className="w-3 h-3" />
         </a>
       </div>
     </div>
