@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { LinearGradient } from "react-text-gradients";
-import { motion } from "react-motion";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -8,9 +7,44 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_s6batkq",
+        "template_7tsiuhi",
+        {
+          from_name: form.name,
+          to_name: "Anzhelika",
+          from_email: form.email,
+          to_email: "kostyukanzhelika@gmail.com",
+          message: form.message,
+        },
+        "_-60POSClBbKWHgNb"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong!");
+        }
+      );
+  };
 
   return (
     <section className="w-full flex justify-center mb-20">
@@ -23,7 +57,11 @@ const Contact = () => {
           </p>
         </div>
         <div className="flex w-2/3 bg-[#32303a] p-8 rounded-xl text-white">
-          <form className=" flex flex-col gap-8  w-full">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className=" flex flex-col gap-8  w-full"
+          >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Name</span>
               <input
