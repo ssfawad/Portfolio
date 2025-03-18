@@ -8,6 +8,10 @@ body {
   padding: 0;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px; /* Adjust this value if needed */
   width: 100%;
