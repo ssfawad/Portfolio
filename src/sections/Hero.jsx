@@ -4,6 +4,7 @@ import "react-social-icons/instagram";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 import "react-social-icons/facebook";
+import MouseScroll from "../components/MouseScroll";
 
 const Hero = () => {
   return (
@@ -47,6 +48,9 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whit
             className="heroIcon"
             url="http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194"
           />
+        </div>
+        <div className="absolute bottom-5">
+          <MouseScroll />
         </div>
       </section>
     </>
