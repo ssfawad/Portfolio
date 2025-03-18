@@ -7,16 +7,6 @@ const ProjectCard = ({ project }) => {
         <img src={project.logo} alt="logo" className="rounded-lg" />
         <div className="absolute inset-0 flex justify-end m-3">
           <SocialIcon className="heroIcon" url={project.source} />
-          {/* <div
-            onClick={() => window.open(project.source, "_blank")}
-            className="bg-neutral-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-          >
-            <img
-              src="/icons/github-icon.svg"
-              alt="github"
-              className="w-2/3 h-2/3 object-contain"
-            ></img>
-          </div> */}
         </div>
       </div>
       <div className="flex flex-col gap-5 text-white-600 my-2 ">
