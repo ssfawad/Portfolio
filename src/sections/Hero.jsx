@@ -33,7 +33,7 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whit
             innovative solutions that enhance user experiences.
           </p>
         </div>
-        <div className="flex flex-row gap-2 justify-center mt-10 max-w-7xl">
+        <div className="flex flex-row gap-4 justify-center mt-10 max-w-7xl">
           <SocialIcon
             className="heroIcon"
             url="https://www.instagram.com/a_akcio/?hl=en"

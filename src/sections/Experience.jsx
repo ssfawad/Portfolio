@@ -12,6 +12,7 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{ background: "#32303a", color: "fff" }}
       contentArrowStyle={{ borderRight: "7px solid #fc0865" }}
       date={experience.duration}
+      dateClassName="text-white"
       iconStyle={{ background: "#32303a", color: "#fff" }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -29,18 +30,28 @@ const ExperienceCard = ({ experience }) => {
           {experience.company}
         </p>
       </div>
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {experience.duties.map((duty, index) => (
+          <li
+            key={`duty-point-${index}`}
+            className="text-white pl-1 tracking-wider"
+          >
+            {duty}
+          </li>
+        ))}
+      </ul>
     </VerticalTimelineElement>
   );
 };
 const Experience = () => {
   return (
     <>
-      <section className="w-full flex justify-center">
+      <section className="w-full flex justify-center mb-20">
         <div className="flex flex-col w-full max-w-7xl items-center justify-start">
           <div className="w-full">
             <p className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal">
               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
-                Experience
+                Work Experience
               </LinearGradient>
             </p>
           </div>
@@ -52,21 +63,6 @@ const Experience = () => {
                 experience={experience}
               ></ExperienceCard>
             ))}
-            {/* <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date="2010 - 2011"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={icon}
-            >
-              <h3 className="vertical-timeline-element-title">Art Director</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                San Francisco, CA
-              </h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, SEO, Online
-                Marketing
-              </p>
-            </VerticalTimelineElement> */}
           </VerticalTimeline>
         </div>
       </section>

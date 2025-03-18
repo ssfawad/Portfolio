@@ -214,38 +214,44 @@ export const myProjects = [
 export const workExperiences = [
   {
     id: 1,
-    company: "VARLab Conestoga College",
+    company: "Centre for Virtual Reality Innovation - VARLab",
     position: "DLS Software Developer",
-    duration: "August 2022 - Present",
-    title:
-      "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: "/Conestoga_College_logo.png",
+    duration: "August 2022 - current",
+    icon: "/varlab_logo.png",
+    duties: [
+      "Developed scalable and performant web applications using JavaScript, ReactJS, MongoDB, and ExpressJS.",
+      "Contributed to flat screen and VR learning experiences using Unity and C#, optimizing data structures for efficiency.",
+      "Led the development of onboarding projects, standardizing workflows and improving ramp-up time for new developers by 45%.",
+      "Conducted code reviews, enforcing best practices in code efficiency, security, and testability.",
+      "Mentored 10+ co-op developers enhancing productivity and team collaboration.",
+    ],
   },
   {
     id: 2,
-    company: "VARLab Conestoga College",
-    position: "AR/VR Software Developer (Part-Time)",
-    duration: "2020 - 2022",
-    title:
-      "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: "/Conestoga_College_logo.png",
+    company: "Centre for Virtual Reality Innovation - VARLab",
+    position: "AR/VR Software Developer (Co-op and Part-Time)",
+    duration: "January 2021 - December 2021",
+    icon: "/varlab_logo.png",
+    duties: [
+      "Developed interactive 2D and 3D learning experiences in Unity and C#, applying modular, reusable, and scalable development principles. ",
+      "Created reusable assets and scripts, improving development speed by 20%.",
+      "Collaborated with UX/UI designers and artists to enhance user interactions, resulting in a 23% increase in usability testing scores and a more intuitive user experience.",
+      "Conducted unit and integration testing, which reduced the number of bugs in production by 12%.",
+      "Managed version control using Git, reducing merge conflicts and improving team efficiency.",
+    ],
   },
   {
     id: 3,
-    company: "VARLab Conestoga College",
-    position: "AR/VR Software Developer (Co-op)",
-    duration: "2019 - 2020",
-    title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: "/Conestoga_College_logo.png",
-  },
-  {
-    id: 4,
     company: "Conestoga College",
     position: "Mobile Application Developer (Co-op)",
-    duration: "2019 - 2020",
-    title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: "/Conestoga_College_logo.png",
+    duration: "June 2020 - December 2020",
+    icon: "/conestoga_logo.png",
+    duties: [
+      "Developed cross-platform mobile applications with integrated augmented reality (AR) features.",
+      "Optimized application performance, increasing speed by 17% and enhancing user engagement by 21%.",
+      "Participated in design and system architecture reviews, ensuring scalability and maintainability.",
+      "Wrote and maintained technical documentation for scalability and future development.",
+      "Gained hands-on experience with Agile methodologies, participating in daily stand-ups, sprint planning, and retrospectives.",
+    ],
   },
 ];
