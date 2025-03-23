@@ -83,7 +83,7 @@ export const myProjects = [
     desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a software developer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
+    href: "https://github.com/A-coderr/three_portfolio",
     source: "https://github.com/A-coderr/three_portfolio",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
@@ -134,9 +134,9 @@ export const myProjects = [
     desc: "A Karate Website, developed as part of a college assignment.",
     subdesc:
       "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
-    href: "https://github.com/A-coderr/Karate_HTML_CSS",
+    href: "https://a-coderr.github.io/karate-galaxy/",
     source: "https://github.com/A-coderr/Karate_HTML_CSS",
-    logo: "assets/project-logo3.png",
+    logo: "projects/KarateGalaxy_Main.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
       background:
