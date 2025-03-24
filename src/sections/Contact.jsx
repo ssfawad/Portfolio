@@ -49,14 +49,20 @@ const Contact = () => {
 
   return (
     <section className="w-full flex justify-center mb-20 px-4" id="contact">
-      <div className="flex flex-col w-full max-w-7xl items-center justify-start">
+      <motion.div
+        className="flex flex-col w-full max-w-7xl items-center justify-start"
+        initial={{ opacity: 0, y: 50 }} // Starts off-screen
+        whileInView={{ opacity: 1, y: 0 }} // Fades in & moves up
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }} // Ensures animation happens only once
+      >
         <div className="w-full text-left">
           <motion.p
             className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }} // Ensures it only animates once per scroll
+            viewport={{ once: true }}
           >
             <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
               Get in touch
@@ -109,15 +115,17 @@ const Contact = () => {
               />
             </label>
 
-            <button
+            <motion.button
               type="submit"
               className="bg-[#ff9720] text-black w-full sm:w-fit py-3 px-6 rounded-lg font-bold outline-none self-center sm:self-start"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             >
               {loading ? "Sending..." : "Send"}
-            </button>
+            </motion.button>
           </form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
