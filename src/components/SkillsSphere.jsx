@@ -1,9 +1,12 @@
 import { useState, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Text, OrbitControls } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { Text } from "@react-three/drei";
+import { useSpring, animated } from "@react-spring/three";
 import * as THREE from "three";
 import PropTypes from "prop-types";
 import { skills } from "../constants/data";
+
+const AnimatedText = animated(Text); // Make Text component animatable
 
 const Word = ({ children, position }) => {
   const [hovered, setHovered] = useState(false);
@@ -15,17 +18,24 @@ const Word = ({ children, position }) => {
     }
   });
 
+  const { color, scale } = useSpring({
+    color: hovered ? "#fc0865" : "white",
+    scale: hovered ? 1.1 : 1, // Slight scaling effect on hover
+    config: { tension: 200, friction: 20 }, // Smooth transition settings
+  });
+
   return (
-    <Text
+    <AnimatedText
       ref={textRef}
       position={position}
       fontSize={0.5}
-      color={hovered ? "#fc0865" : "white"}
+      color={color}
+      scale={scale}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
       {children}
-    </Text>
+    </AnimatedText>
   );
 };
 
@@ -35,8 +45,6 @@ Word.propTypes = {
 };
 
 const WordSphere = () => {
-  const groupRef = useRef();
-
   const radius = 5;
   const wordPositions = skills.map((skill, i) => {
     const phi = Math.acos(-1 + (2 * i) / skills.length);
@@ -50,7 +58,7 @@ const WordSphere = () => {
   });
 
   return (
-    <group ref={groupRef}>
+    <group>
       {wordPositions.map(({ skill, position }, index) => (
         <Word key={index} position={position}>
           {skill}
@@ -60,17 +68,4 @@ const WordSphere = () => {
   );
 };
 
-const SkillsSphere = () => {
-  return (
-    <Canvas
-      camera={{ position: [0, 0, 12], fov: 60 }}
-      style={{ width: "100%", height: "80vh" }}
-    >
-      <ambientLight intensity={0.5} />
-      <WordSphere />
-      <OrbitControls enablePan={false} enableZoom={false} />
-    </Canvas>
-  );
-};
-
-export default SkillsSphere;
+export default WordSphere;
