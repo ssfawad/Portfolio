@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { navLinks } from "../constants/data";
@@ -10,11 +10,11 @@ const NavItems = () => {
         {navLinks.map(({ id, href, name }) => (
           <li
             key={id}
-            className="text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
+            className="text-white hover:text-[#ff9720] font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
           >
             <a
               href={href}
-              className="text-lg md:text-base hover:text-white transition-colors"
+              className="text-lg md:text-base hover:text-[#ff9720] transition-colors"
               onClick={() => {}}
             >
               {name}
@@ -28,31 +28,56 @@ const NavItems = () => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      // Close mobile menu on scroll
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled || isOpen
+            ? "bg-[#1a191e] border-b-2 border-[#ff9720] border-opacity-100 shadow-md"
+            : "bg-transparent border-b-2 border-[#ff9720] border-opacity-0"
+        }`}
+      >
+        <div className="mx-auto px-6 sm:px-8 md:px-10">
           <div className="flex justify-between items-center py-5">
             <a
               href="/"
-              className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
+              className="text-white font-bold text-xl hover:text-[#ff9720] transition-colors"
             >
               Anzhelika
             </a>
 
             <button
               onClick={toggleMenu}
-              className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+              className="text-white hover:text-[#ff9720] focus:outline-none sm:hidden flex"
               aria-label="Open Menu"
             >
               {isOpen ? (
-                <FaTimes color="white" size={30} />
+                <FaTimes color="white" size={25} />
               ) : (
-                <FaAlignJustify color="white" size={30} />
+                <FaAlignJustify color="white" size={25} />
               )}
             </button>
 
@@ -63,7 +88,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${
+          className={`absolute left-0 right-0 bg-[#1a191e] transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${
             isOpen ? "max-h-screen" : "max-h-0"
           }`}
         >
