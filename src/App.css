@@ -12,13 +12,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.container {
-  max-width: 1200px; /* Adjust this value if needed */
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px; /* Add some padding for better spacing */
-}
-
 @keyframes scroll {
    0% { opacity: 0; }
    10% { transform: translateY(0); opacity: 1; }
