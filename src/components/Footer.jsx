@@ -22,6 +22,8 @@ const Footer = () => {
             <a
               href="resume_anzhelika_kostyuk.pdf"
               download
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#ff9720] text-black px-5 py-2 text-sm font-medium rounded-md hover:bg-[#e6891f] transition-colors"
             >
               Download Resume
