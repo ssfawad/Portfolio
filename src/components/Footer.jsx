@@ -20,7 +20,7 @@ const Footer = () => {
 
             {/* Resume Button */}
             <a
-              href="/resume.pdf" // Update with actual resume file path
+              href="resume_anzhelika_kostyuk.pdf"
               download
               className="bg-[#ff9720] text-black px-5 py-2 text-sm font-medium rounded-md hover:bg-[#e6891f] transition-colors"
             >
