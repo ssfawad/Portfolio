@@ -203,3 +203,10 @@ export const workExperiences = [
     ],
   },
 ];
+
+export const socialLinks = [
+  { url: "https://www.instagram.com/a_akcio/?hl=en" },
+  { url: "https://github.com/A-coderr" },
+  { url: "https://www.facebook.com/profile.php?id=100011369881132" },
+  { url: "http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194" },
+];
