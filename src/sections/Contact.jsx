@@ -47,62 +47,64 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full flex justify-center mb-20" id="contact">
+    <section className="w-full flex justify-center mb-20 px-4" id="contact">
       <div className="flex flex-col w-full max-w-7xl items-center justify-start">
-        <div className="w-full">
+        <div className="w-full text-left">
           <p className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal">
             <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
               Get in touch
             </LinearGradient>
           </p>
         </div>
-        <div className="flex w-2/3 bg-[#32303a] p-8 rounded-xl text-white">
+
+        <div className="flex w-full max-w-lg bg-[#32303a] sm:p-8 p-6 rounded-xl text-white">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className=" flex flex-col gap-8  w-full"
+            className="flex flex-col gap-6 w-full"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Name</span>
+              <span className="text-white font-medium mb-2">Name</span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="py-4 px-6 bg-[#46454d] rounded-lg"
+                className="py-3 px-4 bg-[#46454d] rounded-lg"
                 placeholder="ex. John Doe"
               />
             </label>
 
-            <label className="flex flex-col ">
-              <span className="text-white font-medium mb-4">Email address</span>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-2">Email address</span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="py-4 px-6 bg-[#46454d] rounded-lg"
+                className="py-3 px-4 bg-[#46454d] rounded-lg"
                 placeholder="ex. johndoe@gmail.com"
               />
             </label>
 
-            <label className="flex flex-col ">
-              <span className="text-white font-medium mb-4">Message</span>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-2">Message</span>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 required
-                rows={7}
-                className="py-4 px-6 bg-[#46454d] rounded-lg"
+                rows={5}
+                className="py-3 px-4 bg-[#46454d] rounded-lg resize-none"
                 placeholder="Share your thoughts..."
               />
             </label>
+
             <button
               type="submit"
-              className="bg-[#46454d] w-fit py-3 px-8 rounded-lg text-white font-bold shadow-sm shadow-slate-700 outline-none"
+              className="bg-[#ff9720] text-black w-full sm:w-fit py-3 px-6 rounded-lg font-bold outline-none self-center sm:self-start"
             >
               {loading ? "Sending..." : "Send"}
             </button>
