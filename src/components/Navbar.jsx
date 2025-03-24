@@ -2,24 +2,28 @@ import { useEffect, useState } from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { navLinks } from "../constants/data";
+import { motion } from "framer-motion";
 
 const NavItems = () => {
   return (
     <>
       <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
         {navLinks.map(({ id, href, name }) => (
-          <li
+          <motion.li
             key={id}
-            className="text-white hover:text-[#ff9720] font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
+            className="font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
+            whileHover={{ scale: 1.1 }} // Enlarges smoothly
+            transition={{ duration: 0.2, ease: "easeOut" }} // Syncs timing
           >
-            <a
+            <motion.a
               href={href}
-              className="text-lg md:text-base hover:text-[#ff9720] transition-colors"
-              onClick={() => {}}
+              className="text-lg md:text-base text-white"
+              whileHover={{ color: "#ff9720" }} // Matches hover effect
+              transition={{ duration: 0.2, ease: "easeOut" }} // Ensures sync
             >
               {name}
-            </a>
-          </li>
+            </motion.a>
+          </motion.li>
         ))}
       </ul>
     </>
