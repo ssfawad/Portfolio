@@ -1,10 +1,11 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei";
 import { useSpring, animated } from "@react-spring/three";
 import * as THREE from "three";
 import PropTypes from "prop-types";
 import { skills } from "../constants/data";
+import Loader from "./Loader";
 
 const AnimatedText = animated(Text); // Make Text component animatable
 
@@ -86,9 +87,11 @@ const SkillsSphere = () => {
       }}
       style={{ width: "100%", height: isMobile ? "50vh" : "80vh" }} // Reduce height on mobile
     >
-      <ambientLight intensity={0.5} />
-      <WordSphere />
-      <OrbitControls enablePan={false} enableZoom={false} />
+      <Suspense fallback={<Loader />}>
+        <ambientLight intensity={0.5} />
+        <WordSphere />
+        <OrbitControls enablePan={false} enableZoom={false} />
+      </Suspense>
     </Canvas>
   );
 };
