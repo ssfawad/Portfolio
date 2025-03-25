@@ -11,7 +11,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#32303a", color: "fff" }}
-      contentArrowStyle={{ borderRight: "7px solid #fc0865" }}
+      contentArrowStyle={{ borderRight: "7px solid #32303a" }}
       date={experience.duration}
       dateClassName="text-white"
       iconStyle={{ background: "#32303a", color: "#fff" }}
@@ -66,7 +66,7 @@ const Experience = () => {
             </motion.p>
           </div>
 
-          <VerticalTimeline lineColor={"#fc0865"}>
+          <VerticalTimeline lineColor={"#fff"}>
             {workExperiences.map((experience, index) => (
               <ExperienceCard
                 key={index}
