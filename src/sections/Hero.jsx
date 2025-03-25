@@ -5,8 +5,22 @@ import "react-social-icons/github";
 import "react-social-icons/linkedin";
 import "react-social-icons/facebook";
 import MouseScroll from "../components/MouseScroll";
+import { socialLinks } from "../constants/data";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [waveTrigger, setWaveTrigger] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWaveTrigger(true);
+      setTimeout(() => setWaveTrigger(false), 1000); // Reset after animation
+    }, 4000); // Wave every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <section
@@ -37,21 +51,34 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whit
             innovative solutions that enhance user experiences.
           </p>
         </div>
-        <div className="flex flex-row gap-4 justify-center mt-10 max-w-7xl">
-          <SocialIcon
-            className="heroIcon"
-            url="https://www.instagram.com/a_akcio/?hl=en"
-          />
-          <SocialIcon className="heroIcon" url="https://github.com/A-coderr" />
-          <SocialIcon
-            className="heroIcon"
-            url="https://www.facebook.com/profile.php?id=100011369881132"
-          />
-          <SocialIcon
-            className="heroIcon"
-            url="http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194"
-          />
-        </div>
+        <motion.div
+          className="flex flex-row gap-4 justify-center mt-10 max-w-7xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          {socialLinks.map((link, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              animate={
+                waveTrigger
+                  ? {
+                      y: [0, -10, 0], // Wave motion
+                      transition: {
+                        delay: index * 0.1,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      },
+                    }
+                  : {}
+              }
+            >
+              <SocialIcon className="heroIcon" url={link.url} />
+            </motion.div>
+          ))}
+        </motion.div>
         <div className="absolute bottom-5">
           <MouseScroll />
         </div>

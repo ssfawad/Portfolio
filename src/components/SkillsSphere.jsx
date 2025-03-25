@@ -1,36 +1,12 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Text, OrbitControls } from "@react-three/drei";
+import { OrbitControls, Text } from "@react-three/drei";
+import { useSpring, animated } from "@react-spring/three";
 import * as THREE from "three";
 import PropTypes from "prop-types";
+import { skills } from "../constants/data";
 
-const words = [
-  "ReactJS",
-  "Three.js",
-  "JavaScript",
-  "TypeScript",
-  "C#",
-  "Unity",
-  "Python",
-  "HTML5",
-  "CSS3",
-  "Node.js",
-  "Express.js",
-  "Git",
-  "MongoDB",
-  "Azure",
-  "Atlassian suite",
-  "MySQL",
-  "Scrum",
-  "Agile",
-  "3D",
-  "GitHub",
-  "Web",
-  "React Three Fiber",
-  "Rapier",
-  "Drei",
-  "Redux",
-];
+const AnimatedText = animated(Text); // Make Text component animatable
 
 const Word = ({ children, position }) => {
   const [hovered, setHovered] = useState(false);
@@ -42,17 +18,24 @@ const Word = ({ children, position }) => {
     }
   });
 
+  const { color, scale } = useSpring({
+    color: hovered ? "#fc0865" : "white",
+    scale: hovered ? 1.1 : 1, // Slight scaling effect on hover
+    config: { tension: 200, friction: 20 }, // Smooth transition settings
+  });
+
   return (
-    <Text
+    <AnimatedText
       ref={textRef}
       position={position}
       fontSize={0.5}
-      color={hovered ? "#fc0865" : "white"}
+      color={color}
+      scale={scale}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
       {children}
-    </Text>
+    </AnimatedText>
   );
 };
 
@@ -62,25 +45,23 @@ Word.propTypes = {
 };
 
 const WordSphere = () => {
-  const groupRef = useRef();
-
   const radius = 5;
-  const wordPositions = words.map((word, i) => {
-    const phi = Math.acos(-1 + (2 * i) / words.length);
-    const theta = Math.sqrt(words.length * Math.PI) * phi;
+  const wordPositions = skills.map((skill, i) => {
+    const phi = Math.acos(-1 + (2 * i) / skills.length);
+    const theta = Math.sqrt(skills.length * Math.PI) * phi;
     const position = new THREE.Vector3(
       radius * Math.sin(phi) * Math.cos(theta),
       radius * Math.sin(phi) * Math.sin(theta),
       radius * Math.cos(phi)
     );
-    return { position, word };
+    return { position, skill };
   });
 
   return (
-    <group ref={groupRef}>
-      {wordPositions.map(({ word, position }, index) => (
+    <group>
+      {wordPositions.map(({ skill, position }, index) => (
         <Word key={index} position={position}>
-          {word}
+          {skill}
         </Word>
       ))}
     </group>
@@ -88,10 +69,22 @@ const WordSphere = () => {
 };
 
 const SkillsSphere = () => {
+  const [size, setSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = size < 768; // Adjust sphere size for mobile screens
   return (
     <Canvas
-      camera={{ position: [0, 0, 12], fov: 60 }}
-      style={{ width: "100%", height: "80vh" }}
+      camera={{
+        position: [0, 0, isMobile ? 14 : 12], // Move camera back on smaller screens
+        fov: isMobile ? 70 : 60, // Increase FOV for a wider view on mobile
+      }}
+      style={{ width: "100%", height: isMobile ? "50vh" : "80vh" }} // Reduce height on mobile
     >
       <ambientLight intensity={0.5} />
       <WordSphere />
