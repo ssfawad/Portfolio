@@ -12,14 +12,14 @@ const NavItems = () => {
           <motion.li
             key={id}
             className="font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
-            whileHover={{ scale: 1.1 }} // Enlarges smoothly
-            transition={{ duration: 0.2, ease: "easeOut" }} // Syncs timing
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <motion.a
               href={href}
               className="text-lg md:text-base text-white"
-              whileHover={{ color: "#ff9720" }} // Matches hover effect
-              transition={{ duration: 0.2, ease: "easeOut" }} // Ensures sync
+              whileHover={{ color: "#ff9720" }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             >
               {name}
             </motion.a>
@@ -42,7 +42,7 @@ const Navbar = () => {
         setIsScrolled(false);
       }
 
-      // Close mobile menu on scroll
+      //Close mobile menu on scroll.
       if (isOpen) {
         setIsOpen(false);
       }
@@ -66,11 +66,12 @@ const Navbar = () => {
       >
         <div className="mx-auto px-6 sm:px-8 md:px-10">
           <div className="flex justify-between items-center py-5">
-            <a
-              href="/"
-              className="text-white font-bold text-xl hover:text-[#ff9720] transition-colors"
-            >
-              Anzhelika
+            <a href="#home" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Logo"
+                className="w-20 h-10 hover:scale-105 transition-transform"
+              />
             </a>
 
             <button
