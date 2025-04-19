@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
+import PropTypes from "prop-types";
 
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
       className="flex flex-col gap-5 relative rounded-lg sm:p-7 py-5 px-5 shadow-2xl shadow-black-200 bg-[#32303a] transition-all duration-200"
-      whileHover={{ scale: 1.04, rotate: 2 }} // Slightly stronger tilt
-      transition={{ duration: 0.15, ease: "easeInOut" }} // Faster transition
-      style={{ transformOrigin: "center" }} // Keeps tilt centered
-      initial={{ opacity: 0, y: 30 }} // Start hidden & slightly lower
-      whileInView={{ opacity: 1, y: 0 }} // Fade in & move up when in view
-      viewport={{ once: true }} // Only animates once per scroll
+      whileHover={{ scale: 1.04, rotate: 2 }}
+      transition={{ duration: 0.15, ease: "easeInOut" }}
+      style={{ transformOrigin: "center" }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
     >
       {/* Project Image & Social Icon */}
       <div className="backdrop-filter backdrop-blur-3xl w-full rounded-lg relative">
@@ -55,8 +56,8 @@ const ProjectCard = ({ project }) => {
           href={project.href}
           target="_blank"
           rel="noreferrer"
-          whileHover={{ scale: 1.1 }} // Slightly enlarges on hover
-          transition={{ duration: 0.2, ease: "easeOut" }} // Smooth transition
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
         >
           <p className="text-white">Demo</p>
           <img src="arrow-up.png" alt="arrow" className="w-3 h-3" />
@@ -67,3 +68,20 @@ const ProjectCard = ({ project }) => {
 };
 
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    logo: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    subdesc: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};
