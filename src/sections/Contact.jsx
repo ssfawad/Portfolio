@@ -57,7 +57,7 @@ const Contact = () => {
         viewport={{ once: true }} // Ensures animation happens only once
       >
         <div className="w-full text-left">
-          <motion.p
+          <motion.h2
             className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ const Contact = () => {
             <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
               Get in touch
             </LinearGradient>
-          </motion.p>
+          </motion.h2>
         </div>
 
         <div className="flex w-full max-w-lg bg-[#32303a] sm:p-8 p-6 rounded-xl text-white">

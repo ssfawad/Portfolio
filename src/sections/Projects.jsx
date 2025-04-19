@@ -8,7 +8,7 @@ const Projects = () => {
     <section className="w-full flex justify-center mb-20 px-4" id="projects">
       <div className="flex flex-col w-full max-w-7xl items-center justify-start">
         <div className="w-full">
-          <motion.p
+          <motion.h2
             className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const Projects = () => {
             <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
               Projects
             </LinearGradient>
-          </motion.p>
+          </motion.h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
           {myProjects.map((project, index) => (
