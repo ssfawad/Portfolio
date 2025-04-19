@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { workExperiences } from "../constants/data";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -58,7 +59,7 @@ const Experience = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }} // Ensures it only animates once per scroll
+              viewport={{ once: true }}
             >
               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
                 Work Experience
@@ -81,3 +82,13 @@ const Experience = () => {
 };
 
 export default Experience;
+
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    company: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    duration: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    duties: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
