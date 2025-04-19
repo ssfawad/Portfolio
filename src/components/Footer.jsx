@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <motion.footer
       className="w-full bg-[#1a191e] text-white py-8"
-      initial={{ opacity: 0, y: 50 }} // Starts hidden & lower
-      whileInView={{ opacity: 1, y: 0 }} // Fades in & moves up
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true }} // Only animates once per scroll
+      viewport={{ once: true }}
     >
       <div className="mx-auto px-6">
         {/* Separator Line */}
