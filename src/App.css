@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'DavidLibre-Regular';
+  font-family: 'Inter-VariableFont_opsz,wght';
   font-weight: normal;
   font-style: normal;
-  src: url('/fonts/DavidLibre-Regular.ttf') format('truetype');
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Chivo-VariableFont_wght';
+  font-family: 'Roboto-VariableFont_wdth,wght';
   font-weight: normal;
   font-style: normal;
-  src: url('/fonts/Chivo-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Chivo-VariableFont_wght', sans-serif;
+  font-family: 'Roboto-VariableFont_wdth,wght', sans-serif;
   background-color: #1a191e;
   margin: 0;
   padding: 0;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'DavidLibre-Regular', sans-serif;
-} */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter-VariableFont_opsz,wght';
+}
 
 * {
   scroll-behavior: smooth;
