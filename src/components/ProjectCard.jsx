@@ -28,9 +28,9 @@ const ProjectCard = ({ project }) => {
 
       {/* Project Details */}
       <div className="flex flex-col gap-5 text-white-600 my-2">
-        <p className="text-xl font-semibold mb-2 text-white font-generalsans">
+        <h2 className="text-xl font-semibold mb-2 text-white font-generalsans">
           {project.title}
-        </p>
+        </h2>
         <p className="text-[#afb0b6] text-base font-generalsans">
           {project.desc}
         </p>
