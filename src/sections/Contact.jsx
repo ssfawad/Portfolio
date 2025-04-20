@@ -3,16 +3,34 @@ import { LinearGradient } from "react-text-gradients";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
+/**
+ * The Contact section of the website allows users to
+ * submit a message to the website owner. The component renders a form with
+ * name, email and message fields. When the form is submitted, the component
+ * sends an email using EmailJS and displays a success or error message based
+ * on the outcome of the email sending process.
+ */
 const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
+  /**
+   * Handles the change of the form fields, updates the
+   * component state with the new values.
+   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e - The change event.
+   */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
+  /**
+   * Handles the form submission, sends an email using EmailJS
+   * and displays a success or error message based on the
+   * outcome of the email sending process.
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -51,10 +69,10 @@ const Contact = () => {
     <section className="w-full flex justify-center mb-20 px-4" id="contact">
       <motion.div
         className="flex flex-col w-full max-w-7xl items-center justify-start"
-        initial={{ opacity: 0, y: 50 }} // Starts off-screen
-        whileInView={{ opacity: 1, y: 0 }} // Fades in & moves up
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }} // Ensures animation happens only once
+        viewport={{ once: true }}
       >
         <div className="w-full text-left">
           <motion.h2
