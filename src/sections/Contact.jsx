@@ -3,6 +3,12 @@ import { LinearGradient } from "react-text-gradients";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const TO_NAME = import.meta.env.VITE_EMAILJS_TO_NAME;
+const TO_EMAIL = import.meta.env.VITE_EMAILJS_TO_EMAIL;
+
 /**
  * The Contact section of the website allows users to
  * submit a message to the website owner. The component renders a form with
@@ -36,16 +42,16 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        "service_s6batkq",
-        "template_7tsiuhi",
+        SERVICE_ID,
+        TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Anzhelika",
+          to_name: TO_NAME,
           from_email: form.email,
-          to_email: "kostyukanzhelika@gmail.com",
+          to_email: TO_EMAIL,
           message: form.message,
         },
-        "_-60POSClBbKWHgNb"
+        PUBLIC_KEY
       )
       .then(
         () => {
