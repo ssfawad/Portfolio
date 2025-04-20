@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import { skills } from "../constants/data";
 import Loader from "./Loader";
 
-const AnimatedText = animated(Text); // Make Text component animatable
+const AnimatedText = animated(Text);
 
 const Word = ({ children, position }) => {
   const [hovered, setHovered] = useState(false);
@@ -21,8 +21,8 @@ const Word = ({ children, position }) => {
 
   const { color, scale } = useSpring({
     color: hovered ? "#fc0865" : "white",
-    scale: hovered ? 1.1 : 1, // Slight scaling effect on hover
-    config: { tension: 200, friction: 20 }, // Smooth transition settings
+    scale: hovered ? 1.1 : 1,
+    config: { tension: 200, friction: 20 },
   });
 
   return (
@@ -30,6 +30,7 @@ const Word = ({ children, position }) => {
       ref={textRef}
       position={position}
       fontSize={0.5}
+      font="/fonts/Roboto-VariableFont_wdth,wght.ttf"
       color={color}
       scale={scale}
       onPointerOver={() => setHovered(true)}
