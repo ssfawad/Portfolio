@@ -30,7 +30,7 @@ const Word = ({ children, position }) => {
       ref={textRef}
       position={position}
       fontSize={0.5}
-      font="/fonts/Roboto-VariableFont_wdth,wght.ttf"
+      font="fonts/Roboto-VariableFont_wdth,wght.ttf"
       color={color}
       scale={scale}
       onPointerOver={() => setHovered(true)}
