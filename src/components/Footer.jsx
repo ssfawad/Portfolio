@@ -40,8 +40,8 @@ const Footer = () => {
           {/* Right Section - Social Icons */}
           <div className="flex gap-4 mt-4 sm:mt-0">
             {[
-              "https://github.com/A-coderr",
-              "http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194",
+              "https://github.com/ssfawad",
+              "https://www.linkedin.com/in/syed-fawad/",
               "https://www.instagram.com/a_akcio/?hl=en",
               "https://www.facebook.com/profile.php?id=100011369881132",
             ].map((url, index) => (
@@ -63,7 +63,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-xs text-neutral-400 mt-6">
-          © {new Date().getFullYear()} Anzhelika Kostyuk. All rights reserved.
+          © {new Date().getFullYear()} Syed Fawad. All rights reserved.
         </div>
       </div>
     </motion.footer>
