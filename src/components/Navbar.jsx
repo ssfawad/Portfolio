@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaAlignJustify } from "react-icons/fa";
+import { FaAlignRight } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { navLinks } from "../constants/data";
 import { motion } from "framer-motion";
@@ -70,7 +70,7 @@ const Navbar = () => {
               <img
                 src="logo.png"
                 alt="Logo"
-                className="w-20 h-10 hover:scale-105 transition-transform"
+                className="w-12 h-12 hover:scale-105 transition-transform"
               />
             </a>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
               {isOpen ? (
                 <FaTimes color="white" size={25} />
               ) : (
-                <FaAlignJustify color="white" size={25} />
+                <FaAlignRight color="white" size={25} />
               )}
             </button>
 
