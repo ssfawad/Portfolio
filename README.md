@@ -6,12 +6,12 @@
   <img src="public/logo.png" alt="Logo" width="200" align="right"/>
    &nbsp;&nbsp;&nbsp;&nbsp;
   <h4>
-    A showcase of my skills, projects, and expertise as a Software Developer.  
+    A showcase of my skills, projects, and expertise as a Cloud Engineer.  
     This website is built using modern web technologies and includes interactive 3D elements to create an engaging experience.
   </h4>
   <p>
     <span style="font-size: 1.2em; font-weight: bold;">🔗 Live Demo:</span>
-    <a href="https://a-coderr.github.io/portfolio-website/" target="_blank">
+    <a href="https://github.com/ssfawad/ssfawad.github.io" target="_blank">
       Anzhelika Kostyuk
     </a>
   </p>

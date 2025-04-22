@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
     >
       <div>
         <h3 className="text-white font-bold">{experience.position}</h3>
-        <p className=" text-gray-300 font-mono" style={{ margin: 0 }}>
+        <p className=" text-gray-300 font-sans" style={{ margin: 0 }}>
           {experience.company}
         </p>
       </div>

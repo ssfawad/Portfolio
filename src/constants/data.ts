@@ -79,12 +79,12 @@ export const myProjects = [
     ],
   },
   {
-    title: "Anzhelika Kostyuk - Portfolio Website",
-    desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a software developer.",
+    title: "Syed Fawad - Portfolio Website",
+    desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a cloud engineer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "https://github.com/A-coderr/three_portfolio",
-    source: "https://github.com/A-coderr/three_portfolio",
+    href: "https://github.com/ssfawad/ssfawad.github.io",
+    source: "https://github.com/ssfawad/ssfawad.github.io",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
       backgroundColor: "#13202F",
@@ -164,38 +164,40 @@ export const workExperiences = [
     id: 1,
     company: "Amazon Web Services",
     position: "Cloud Support Engineer",
-    duration: "January 2022 - September 2023",
-    icon: "varlab_logo.png",
+    duration: "January 2022 – September 2023",
+    icon: "awslogo.png",
     duties: [
-      "Diagnosed and resolved 100+ critical incidents affecting client production workloads across diverse industries ",
-      "Configured and optimized AWS infrastructure – IAM, S3, KMS, VPCs, CloudWatch, CloudTrail, RDS, DynamoDB, and more – for hundreds of clients ensuring security, scalability, and compliance ",
-      "Achieved over 70% cost reductions for multiple Fortune 500 clients through ETL pipeline optimization and fine-tuning SQL queries, driving annual savings in the millions ",
-      "Fostered a collaborative learning environment by mentoring four new hires, developing knowledge base articles, and delivering engaging presentations ",
-      "Consistently exceeded KPIs for case resolution time, availability, and 95%+ customer satisfaction, contributing to team performance goals ",
+      "Diagnosed & resolved 100+ critical production incidents across AWS services",
+      "Optimized IAM, S3, VPCs, RDS, DynamoDB, CloudWatch & more for hundreds of clients",
+      "Cut costs by 70% for Fortune 500 customers via ETL pipeline & SQL tuning",
+      "Mentored 4 new hires, authored KB articles & delivered team workshops",
+      "Consistently surpassed SLA targets and maintained 95%+ CSAT",
     ],
   },
+
   {
     id: 2,
     company: "Citi",
-    position: "Application Support Engineer ",
-    duration: "August 2021 - December 2021",
-    icon: "varlab_logo.png",
+    position: "Application Support Engineer",
+    duration: "August 2021 – December 2021",
+    icon: "citilogo.png",
     duties: [
-      "Ensured system stability and compliance with SLAs by monitoring batch processes and resolving failures ",
-      "Monitored and conducted root cause analysis for issues with Linux servers and Oracle databases ",
-      "Developed and maintained technical support documentation as well as Standard Operating Procedures ",
+      "Monitored batch jobs & resolved failures to meet SLA commitments",
+      "Performed root‑cause analysis on Linux servers & Oracle DB incidents",
+      "Authored & updated technical documentation and SOPs",
     ],
   },
+
   {
     id: 3,
     company: "Dentsply Sirona",
     position: "Unit Lead",
-    duration: "August 2018 - MAy 2021",
-    icon: "conestoga_logo.png",
+    duration: "August 2018 – May 2021",
+    icon: "dentsply.png",
     duties: [
-      "Trained and managed over 30 manufacturing technicians, while also fostering collaboration across departments to meet business objectives ",
-      "Spearheaded the development of manufacturing line processes to eliminate bottlenecks, resulting in a 200% increase in daily production efficiency ",
-      "Performed maintenance and troubleshooting on specialized lasers and 3d-printers while addressing issues with corrupted system files ",
+      "Trained & managed 30+ technicians, driving cross‑department collaboration",
+      "Redesigned production workflow to boost daily throughput by 200%",
+      "Maintained and troubleshot lasers & 3D printers, resolving system errors",
     ],
   },
 ];
@@ -228,8 +230,9 @@ export const skills = [
   "Terraform",
   "Kubernetes",
   "Docker",
-  "Jenkins",
   "Postman",
   "MS Office Suite",
-  "Jenkins"
+  "Jenkins",
+  "Jira",
+  "Slack"
 ];
