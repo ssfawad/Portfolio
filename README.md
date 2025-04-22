@@ -82,6 +82,15 @@ To run this project locally, follow these steps:
    ```sh
    npm run dev
    ```
+### Production Ready
+1. **Run production build**
+   ```sh
+   npm run build
+   ```
+
+2. **Hosting**
+   Host using Github pages or site of your choice.
+
 ---
 
 ### 📜 License
