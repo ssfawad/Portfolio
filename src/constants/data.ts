@@ -83,7 +83,7 @@ export const myProjects = [
     desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a cloud engineer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "https://github.com/ssfawad/ssfawad.github.io",
+    href: "ssfawad.github.io",
     source: "https://github.com/ssfawad/ssfawad.github.io",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
@@ -130,13 +130,13 @@ export const myProjects = [
     ],
   },
   {
-    title: "Karate Galaxy - Karate Website",
-    desc: "A Karate Website, developed as part of a college assignment.",
+    title: "AI Text Summarizer App",
+    desc: "Built and deployed a full-stack app on Replit using HTML/CSS/JavaScript/Node.js as part of Postman Academy.",
     subdesc:
-      "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
-    href: "https://a-coderr.github.io/karate-galaxy/",
-    source: "https://github.com/A-coderr/Karate_HTML_CSS",
-    logo: "projects/KarateGalaxy_Main.png",
+      "Utilizes real-world APIs including the Hugging Face Inference API and Postman for integration.",
+     href: "https://github.com/genie360s/postman-course-ai-text-summarizer",
+    source: "https://github.com/genie360s/postman-course-ai-text-summarizer",
+    logo: "projects/Textapp.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
       background:
@@ -155,6 +155,16 @@ export const myProjects = [
         name: "CSS",
         path: "icons/css-3.svg",
       },
+      {
+        id: 3,
+        name: "Java Script",
+        path: "icons/javascript.svg",
+      },
+      {
+        id: 4,
+        name: "NodeJS",
+        path: "icons/nodejs.png",
+      },
     ],
   },
 ];
@@ -167,8 +177,7 @@ export const workExperiences = [
     duration: "January 2022 – September 2023",
     icon: "awslogo.png",
     duties: [
-      "Diagnosed & resolved 100+ critical production incidents across AWS services",
-      "Optimized IAM, S3, VPCs, RDS, DynamoDB, CloudWatch & more for hundreds of clients",
+      "Diagnosed & resolved 100+ critical production incidents for clients across diverse industries",
       "Cut costs by 70% for Fortune 500 customers via ETL pipeline & SQL tuning",
       "Mentored 4 new hires, authored KB articles & delivered team workshops",
       "Consistently surpassed SLA targets and maintained 95%+ CSAT",
@@ -195,9 +204,9 @@ export const workExperiences = [
     duration: "August 2018 – May 2021",
     icon: "dentsply.png",
     duties: [
-      "Trained & managed 30+ technicians, driving cross‑department collaboration",
+      "Trained & managed 30+ technicians, while also driving cross‑department collaboration",
       "Redesigned production workflow to boost daily throughput by 200%",
-      "Maintained and troubleshot lasers & 3D printers, resolving system errors",
+      "Maintained and troubleshot lasers & 3D printers, maintaining 90%+ uptime",
     ],
   },
 ];
