@@ -44,7 +44,7 @@ const Hero = () => {
             <span className="inline-block text-white">
               <Typewriter
                 options={{
-                  strings: ['Cloud Engineer', 'Developer', 'Chai Addict', 'Oompaloompa'],
+                  strings: ['Cloud Engineer', 'Developer', 'Chai Addict', 'Tech Enthusiast', 'Summit Seeker'],
                   autoStart: true,
                   loop: true,
                   pauseFor: 2000,
