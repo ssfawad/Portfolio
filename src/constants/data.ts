@@ -201,9 +201,7 @@ export const workExperiences = [
 ];
 
 export const socialLinks = [
-  { url: "https://www.instagram.com/a_akcio/?hl=en" },
   { url: "https://github.com/ssfawad" },
-  { url: "https://www.facebook.com/profile.php?id=100011369881132" },
   { url: "https://www.linkedin.com/in/syed-fawad/" },
 ];
 
