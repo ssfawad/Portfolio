@@ -30,18 +30,18 @@ const Hero = () => {
         id="home"
       >
         <div className="max-w-7xl mx-auto flex flex-col c-space gap-7 items-center">
-          <h2 className="sm:text-3xl md:text-4xl text-2xl font-medium text-white text-center">
-            Hi, my name is{" "}
-            <span className="inline-block sm:text-7xl md:text-8xl text-6xl">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium text-white text-center">
+            Hi, I'm{" "}
+            <span className="inline-block text-4xl sm:text-5xl md:text-6xl ">
               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
                  Syed Fawad
               </LinearGradient>
             </span>
           </h2>
 
-          <h2 className="mt-2 text-4xl md:text-6xl font-bold flex items-baseline justify-center gap-7">
-            <span className="text-white">I am a  </span>
-            <span className="inline-block text-red-500">
+          <h2 className="mt-2 text-4xl sm:text-6xl md:text-7xl font-bold flex items-baseline justify-center gap-7">
+{/*         <span className="text-white">I am a  </span> */}
+            <span className="inline-block text-white">
               <Typewriter
                 options={{
                   strings: ['Cloud Engineer', 'Developer', 'Chai Addict', 'Oompaloompa'],
