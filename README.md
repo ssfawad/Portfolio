@@ -87,15 +87,6 @@ To run this project locally, follow these steps:
 ### 📜 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-<br/><br/>
-
-<div align="center"> 
-   <h3>📩 Connect with Me ⬇️</h3>
-   <h4>I’m actively looking for new opportunities! If you're a recruiter or hiring manager, feel free to reach out.</h4>
-   <a href="https://www.linkedin.com/in/anzhelikakostyuk/" target="_blank">
-     <img src="https://img.shields.io/badge/LinkedIn-anzhelikakostyuk-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile">
-   </a>
-   <a href="https://github.com/A-coderr" target="_blank">
-     <img src="https://img.shields.io/badge/GitHub-A--coderr-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile">
-   </a>
-</div>
+<br/>
+S/O to a-coderr (Anzhelika) for the template
+<br/>

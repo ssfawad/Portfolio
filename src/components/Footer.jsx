@@ -27,7 +27,7 @@ const Footer = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <a
-              href="resume_anzhelika_kostyuk.pdf"
+              href="Syed_Fawad_Resume.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -42,8 +42,6 @@ const Footer = () => {
             {[
               "https://github.com/ssfawad",
               "https://www.linkedin.com/in/syed-fawad/",
-              "https://www.instagram.com/a_akcio/?hl=en",
-              "https://www.facebook.com/profile.php?id=100011369881132",
             ].map((url, index) => (
               <motion.div
                 key={index}
