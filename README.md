@@ -88,8 +88,7 @@ To run this project locally, follow these steps:
    npm run build
    ```
 
-2. **Hosting**
-   Host using Github pages or site of your choice.
+2. Host using Github pages or site of your choice.
 
 ---
 
