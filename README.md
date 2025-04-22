@@ -12,7 +12,7 @@
   <p>
     <span style="font-size: 1.2em; font-weight: bold;">🔗 Live Demo:</span>
     <a href="https://github.com/ssfawad/ssfawad.github.io" target="_blank">
-      Anzhelika Kostyuk
+      Syed Fawad
     </a>
   </p>
 </div>
