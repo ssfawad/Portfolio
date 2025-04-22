@@ -8,6 +8,8 @@ import MouseScroll from "../components/MouseScroll";
 import { socialLinks } from "../constants/data";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Typewriter from 'typewriter-effect';
+
 
 const Hero = () => {
   const [waveTrigger, setWaveTrigger] = useState(false);
@@ -28,19 +30,32 @@ const Hero = () => {
         id="home"
       >
         <div className="max-w-7xl mx-auto flex flex-col c-space gap-7 items-center">
-          <h2 className="md:text-5xl sm:text-4xl text-2xl font-medium text-white text-center">
+          <h2 className="sm:text-3xl md:text-4xl text-2xl font-medium text-white text-center">
             Hi, my name is{" "}
-            <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
-              Syed Fawad
-            </LinearGradient>
+            <span className="inline-block sm:text-7xl md:text-8xl text-6xl">
+              <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
+                 Syed Fawad
+              </LinearGradient>
+            </span>
           </h2>
-          <h2
-            className=" text-center text-white xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal relative w-[max-content]
-before:absolute before:inset-0 before:animate-typewriter before:bg-[#1a191e]
-after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-white"
-          >
-            I am a Cloud Engineer
+
+          <h2 className="mt-2 text-4xl md:text-6xl font-bold flex items-baseline justify-center gap-7">
+            <span className="text-white">I am a  </span>
+            <span className="inline-block text-red-500">
+              <Typewriter
+                options={{
+                  strings: ['Cloud Engineer', 'Developer', 'Chai Lover', 'Fast Learner', 'Nap Taker'],
+                  autoStart: true,
+                  loop: true,
+                  pauseFor: 2000,
+                  deleteSpeed: 50,
+                  delay: 75,
+                }}
+              />
+            </span>
           </h2>
+
+
 
         </div>
         <motion.div
