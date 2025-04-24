@@ -28,13 +28,13 @@ export const navLinks = [
 
 export const myProjects = [
   {
-    title: "ThreeRun - 3D Obstacle Course Game",
-    desc: "A 3D obstacle course game built with React Three Fiber, featuring a third-person character controller with movement and animations.",
+    title: "Tic-Tac-Toe - Containerized  & CICD",
+    desc: "A Tic-Tac-Toe game built with Node.js and WebSockets, containerized using Docker, and deployed to Azure Web Apps using GitHub Actions.",
     subdesc:
-      "Currently in early development, with plans for level completion, multiplayer, and collectibles.",
-    href: "https://a-coderr.github.io/obstacle_course_r3f/",
-    source: "https://github.com/A-coderr/obstacle_course_r3f",
-    logo: "projects/ThreeRun_Main_Screen.png",
+      "Features local play, online multiplayer, and play against bots. Early development with plans to revamp UI.",
+    href: "https://github.com/ssfawad/MyWebApp",
+    source: "https://github.com/ssfawad/MyWebApp",
+    logo: "projects/webapp.png",
     logoStyle: {
       backgroundColor: "#2A1816",
       border: "0.2px solid #36201D",
@@ -43,38 +43,13 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "React.js",
-        path: "icons/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "icons/tailwindcss-icon.svg",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "icons/typescript-icon.svg",
-      },
-      {
-        id: 4,
         name: "Java Script",
         path: "icons/javascript.svg",
       },
       {
-        id: 5,
-        name: "Three.js",
-        path: "icons/threejs.svg",
-      },
-      {
-        id: 6,
-        name: "HTML",
-        path: "icons/html-5.svg",
-      },
-      {
-        id: 7,
-        name: "Redux",
-        path: "icons/redux.svg",
+        id: 2,
+        name: "node.js",
+        path: "icons/nodejs.png",
       },
     ],
   },
