@@ -32,7 +32,7 @@ export const myProjects = [
     desc: "A Tic-Tac-Toe game built with Node.js and WebSockets, containerized using Docker, and deployed to Azure Web Apps using GitHub Actions.",
     subdesc:
       "Features local play, online multiplayer, and play against bots. Early development with plans to revamp UI.",
-    href: "https://github.com/ssfawad/MyWebApp",
+    href: "https://syed-docker-webapp-gvfzd2b9cugagyd9.canadacentral-01.azurewebsites.net/",
     source: "https://github.com/ssfawad/MyWebApp",
     logo: "projects/webapp.png",
     logoStyle: {
@@ -50,6 +50,26 @@ export const myProjects = [
         id: 2,
         name: "node.js",
         path: "icons/nodejs.png",
+      },
+      {
+        id: 3,
+        name: "github",
+        path: "icons/git.png",
+      },
+      {
+        id: 4,
+        name: "git",
+        path: "icons/gitlanguage.png",
+      },
+      {
+        id: 5,
+        name: "docker",
+        path: "icons/docker.png",
+      },
+      {
+        id: 6,
+        name: "azure",
+        path: "icons/azure.png",
       },
     ],
   },
@@ -139,6 +159,11 @@ export const myProjects = [
         id: 4,
         name: "NodeJS",
         path: "icons/nodejs.png",
+      },
+      {
+        id: 5,
+        name: "Postman",
+        path: "icons/postman.png",
       },
     ],
   },
