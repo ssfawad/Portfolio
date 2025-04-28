@@ -217,7 +217,6 @@ export const socialLinks = [
 ];
 
 export const skills = [
-  "ReactJS",
   "Python",
   "Salesforce",
   "HTML5",
@@ -234,7 +233,6 @@ export const skills = [
   "GitHub",
   "Git",
   "Apache Airflow",
-  "TailwindCSS",
   "SQL",
   "Terraform",
   "Kubernetes",
