@@ -165,6 +165,55 @@ export const myProjects = [
         name: "Postman",
         path: "icons/postman.png",
       },
+
+    ],
+  },
+  {
+    title: "Azure Image Processing Pipeline",
+    desc: "Built a cloud-native image processing pipeline combining Azure Functions, Azure Kubernetes Service (AKS), and KEDA event-driven scaling.",
+    subdesc:
+      "The system automatically processes uploaded images from Azure Blob Storage, resizes them, and saves them back efficiently — all orchestrated via Docker, GitHub Actions CI/CD, and Service Bus messaging.",
+     href: "https://github.com/ssfawad/Image-Processing-Pipeline",
+    source: "https://github.com/ssfawad/Image-Processing-Pipeline",
+    logo: "projects/Azpipeline.png",
+    logoStyle: {
+      backgroundColor: "#60f5a1",
+      background:
+        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "azure",
+        path: "icons/azure.png",
+      },
+      {
+        id: 2,
+        name: "github",
+        path: "icons/git.png",
+      },
+      {
+        id: 3,
+        name: "git",
+        path: "icons/gitlanguage.png",
+      },
+      {
+        id: 4,
+        name: "docker",
+        path: "icons/docker.png",
+      },
+      {
+        id: 5,
+        name: "kubernetes",
+        path: "icons/kube.png",
+      },
+      {
+        id: 6,
+        name: "python",
+        path: "icons/python.png",
+      },
     ],
   },
 ];
