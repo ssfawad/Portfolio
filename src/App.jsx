@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import Experience from "./sections/Experience";
+import Certifications from "./sections/Certifications";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
@@ -16,6 +17,7 @@ export default function App() {
       <Hero />
       <Experience />
       <Skills />
+      <Certifications/>
       <Projects />
       <Contact />
       <Footer />
