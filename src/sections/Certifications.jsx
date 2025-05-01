@@ -63,7 +63,7 @@ const Certifications = () => {
               <img
                 src={cert.img}
                 alt={cert.alt}
-                className="h-36 w-auto object-contain"
+                className="h-44 w-auto object-contain"
               />
             </a>
           ))}
