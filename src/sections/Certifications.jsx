@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const certs = [
     {
-      img: "/certs/awssaa.png",
+      img: "certs/awssaa.png",
       alt: "AWS Certified Solutions Architect – Associate",
       url: "https://www.credly.com/badges/5eae90df-976d-4cd5-aaef-fcef4ecc2c76/",
     },
     {
-      img: "/certs/awsdev.png",
+      img: "certs/awsdev.png",
       alt: "AWS Certified Developer – Associate",
       url: "https://www.credly.com/badges/fcbccb43-cb90-4221-8807-217d76e0b903/",
     },
     {
-      img: "/certs/awsdata.png",
+      img: "certs/awsdata.png",
       alt: "AWS Certified Data Engineer – Associate",
       url: "https://www.credly.com/badges/f6ec73a9-cab2-42f1-9bac-81f256356183/",
     },
     {
-        img: "/certs/sfca.png",
+        img: "certs/sfca.png",
         alt: "Salesforce Certified Administrator",
         url: "https://www.salesforce.com/trailblazer/syedfawad",
     },
