@@ -83,8 +83,8 @@ export const myProjects = [
     desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a cloud engineer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "ssfawad.github.io",
-    source: "https://github.com/ssfawad/ssfawad.github.io",
+    href: "https://ssfawad.github.io/Portfolio-Website/",
+    source: "https://github.com/ssfawad/Portfolio-Website",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
       backgroundColor: "#13202F",
