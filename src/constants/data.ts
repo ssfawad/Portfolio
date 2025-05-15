@@ -221,6 +221,44 @@ export const myProjects = [
       },
     ],
   },
+  {
+    title: "AWS Static Site",
+    desc: "A modern, fully automated static website deployed using AWS services including S3, CloudFront, CodePipeline, and CodeBuild.",
+    subdesc:
+      "Changes pushed to GitHub are automatically built and deployed with cache invalidation for instant updates — all using native AWS CI/CD.",
+     href: "https://d2c1patd946v03.cloudfront.net",
+    source: "https://github.com/ssfawad/aws-static-site-repo",
+    logo: "projects/awssite.png",
+    logoStyle: {
+      backgroundColor: "#60f5a1",
+      background:
+        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "aws",
+        path: "icons/awslogo.png",
+      },
+      {
+        id: 2,
+        name: "github",
+        path: "icons/git.png",
+      },
+      {
+        id: 3,
+        name: "git",
+        path: "icons/gitlanguage.png",
+      },
+      {
+        id: 4,
+        name: "html",
+        path: "icons/html-5.svg",
+      },
+    ],
+  },
 ];
 
 export const workExperiences = [
