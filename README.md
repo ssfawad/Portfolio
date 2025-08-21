@@ -11,7 +11,7 @@
   </h4>
   <p>
     <span style="font-size: 1.2em; font-weight: bold;">🔗 Live Demo:</span>
-         <a href="https://ssfawad.github.io/Portfolio-Website/" target="_blank">
+         <a href="https://ssfawad.github.io/Portfolio" target="_blank">
       Syed Fawad
     </a>
   </p>
@@ -98,3 +98,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <br/>
 S/O to a-coderr (Anzhelika) for the template
 <br/>
+
