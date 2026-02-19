@@ -19,26 +19,9 @@ const Footer = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
         ></motion.div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-          {/* Left Section - Branding & Resume Button */}
-          <motion.div
-            className="flex flex-col sm:flex-row items-center gap-6"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <a
-              href="Syed_Fawad_Resume.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#ff9720] text-black px-6 py-4 text-sm font-medium rounded-md hover:bg-[#e6891f] text-base font-semibold"
-            >
-              Download Resume
-            </a>
-          </motion.div>
-
-          {/* Right Section - Social Icons */}
-          <div className="flex gap-4 mt-4 sm:mt-0">
+        <div className="flex flex-col sm:flex-row items-center justify-end">
+          {/* Social Icons */}
+          <div className="flex gap-4">
             {[
               "https://github.com/ssfawad",
               "https://www.linkedin.com/in/syed-fawad/",

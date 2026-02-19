@@ -1,66 +1,70 @@
 import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
 import PropTypes from "prop-types";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
-      className="flex flex-col gap-5 relative rounded-lg sm:p-7 py-5 px-5 shadow-2xl shadow-black-200 bg-[#32303a] transition-all duration-200"
-      whileHover={{ scale: 1.04, rotate: 2 }}
-      transition={{ duration: 0.15, ease: "easeInOut" }}
-      style={{ transformOrigin: "center" }}
+      className="flex flex-col gap-5 relative rounded-lg sm:p-7 py-5 px-5 shadow-2xl bg-[#32303a] border border-white/10 hover:border-[#ff9720]/50 hover:shadow-[0_0_20px_rgba(255,151,32,0.2)] transition-all duration-300"
+      whileHover={{ scale: 1.03, transition: { duration: 0.15, ease: "easeInOut" } }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      {/* Project Image & Social Icon */}
-      <div className="backdrop-filter backdrop-blur-3xl w-full rounded-lg relative">
-        <img src={project.logo} alt="logo" className="rounded-lg" />
-        <div className="absolute inset-0 flex justify-end m-3">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <SocialIcon className="heroIcon" url={project.source} />
-          </motion.div>
-        </div>
+      {/* Project Image */}
+      <div className="backdrop-filter backdrop-blur-3xl w-full rounded-lg">
+        <img src={project.logo} alt="logo" className="rounded-lg w-full" loading="lazy" />
       </div>
 
       {/* Project Details */}
-      <div className="flex flex-col gap-5 text-white-600 my-2">
-        <h2 className="text-xl font-semibold mb-2 text-white font-generalsans">
+      <div className="flex flex-col gap-3 my-2">
+        <h2 className="text-xl font-semibold text-white font-generalsans">
           {project.title}
         </h2>
         <p className="text-[#afb0b6] text-base font-generalsans">
           {project.desc}
         </p>
-        <p className="text-[#afb0b6] text-base font-generalsans">
+        <p className="text-neutral-500 text-sm font-generalsans">
           {project.subdesc}
         </p>
       </div>
 
-      {/* Tags & Demo Link */}
-      <div className="flex flex-col items-start justify-between flex-wrap gap-5">
-        <div className="flex flex-wrap items-center gap-3 w-full overflow-hidden">
-          {project.tags.map((tag, index) => (
-            <div
-              key={index}
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center"
-            >
-              <img src={tag.path} alt={tag.name} className="w-6 sm:w-8" />
-            </div>
-          ))}
-        </div>
+      {/* Tags */}
+      <div className="flex flex-wrap items-center gap-3 w-full overflow-hidden">
+        {project.tags.map((tag, i) => (
+          <div
+            key={i}
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center"
+          >
+            <img src={tag.path} alt={tag.name} className="w-6 sm:w-8" loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      {/* Action Buttons */}
+      <div className="flex items-center gap-3">
+        {project.href && (
+          <motion.a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff9720]/50 text-[#ff9720] text-sm font-medium hover:bg-[#ff9720]/10 transition-colors duration-200"
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          >
+            <FaExternalLinkAlt size={11} />
+            Live Demo
+          </motion.a>
+        )}
         <motion.a
-          className="flex items-center gap-2 cursor-pointer text-white-600"
-          href={project.href}
+          href={project.source}
           target="_blank"
           rel="noreferrer"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-neutral-300 text-sm font-medium hover:bg-white/5 transition-colors duration-200"
+          whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
         >
-          <p className="text-white">Demo</p>
-          <img src="arrow-up.png" alt="arrow" className="w-3 h-3" />
+          <FaGithub size={14} />
+          Source
         </motion.a>
       </div>
     </motion.div>
@@ -76,7 +80,7 @@ ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     subdesc: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
+    href: PropTypes.string,
     tags: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
@@ -84,4 +88,5 @@ ProjectCard.propTypes = {
       })
     ).isRequired,
   }).isRequired,
+  index: PropTypes.number.isRequired,
 };

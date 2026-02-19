@@ -58,18 +58,9 @@ const Navbar = () => {
             />
           </a>
 
-          {/* Desktop nav + Resume link */}
+          {/* Desktop nav */}
           <nav className="sm:flex hidden items-center gap-6">
             <NavItems />
-            <motion.a
-              href="Syed_Fawad_Resume.pdf"
-              download
-              className="bg-gradient-to-r from-[#ff9720] to-[#fc0865] text-black px-4 py-2 rounded-lg font-medium shadow-md transform transition duration-200 ease-out hover:scale-105 hover:shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-            >
-              Download Resume
-            </motion.a>
           </nav>
 
           {/* Mobile menu toggle */}
@@ -83,7 +74,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile nav + Resume link */}
+      {/* Mobile nav */}
       <div
         className={`absolute left-0 right-0 bg-[#1a191e] transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden ${
           isOpen ? "max-h-screen" : "max-h-0"
@@ -91,15 +82,6 @@ const Navbar = () => {
       >
         <nav className="p-5 flex flex-col items-center gap-4">
           <NavItems />
-          <motion.a
-            href="Syed_Fawad_Resume.pdf"
-            download
-            className="mt-4 bg-gradient-to-r from-[#ff9720] to-[#fc0865] text-black px-4 py-2 rounded-lg font-medium shadow-md transform transition duration-200 ease-out hover:scale-105 hover:shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            Download Resume
-          </motion.a>
         </nav>
       </div>
     </header>

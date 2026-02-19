@@ -1,8 +1,7 @@
 import { Html, useProgress } from "@react-three/drei";
 
 const Loader = () => {
-  const { progress } = useProgress(); // Get loading progress
-  console.log("Loading Progress:", progress); // Log progress to see if it's working
+  const { progress } = useProgress();
 
   return (
     <Html center>

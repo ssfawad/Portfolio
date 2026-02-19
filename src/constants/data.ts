@@ -1,4 +1,4 @@
-export const navLinks = [
+﻿export const navLinks = [
   {
     id: 1,
     name: "Home",
@@ -6,26 +6,16 @@ export const navLinks = [
   },
   {
     id: 2,
-    name: "Experience",
-    href: "#experience",
-  },
-  {
-    id: 3,
-    name: "Skills",
-    href: "#skills",
-  },
-  {
-    id: 4,
     name: "Certifications",
     href: "#certifications",
   },
   {
-    id: 5,
+    id: 3,
     name: "Projects",
     href: "#projects",
   },
   {
-    id: 6,
+    id: 4,
     name: "Contact",
     href: "#contact",
   },
@@ -83,7 +73,7 @@ export const myProjects = [
     desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a cloud engineer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "https://ssfawad.github.io/Portfolio-Website/",
+    href: "https://ssfawad.github.io/Portfolio/",
     source: "https://github.com/ssfawad/Portfolio-Website",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
@@ -134,7 +124,6 @@ export const myProjects = [
     desc: "Built and deployed a full-stack app on Replit using HTML/CSS/JavaScript/Node.js as part of Postman Academy.",
     subdesc:
       "Utilizes real-world APIs including the Hugging Face Inference API and Postman for integration.",
-     href: "https://github.com/genie360s/postman-course-ai-text-summarizer",
     source: "https://github.com/genie360s/postman-course-ai-text-summarizer",
     logo: "projects/Textapp.png",
     logoStyle: {
@@ -178,7 +167,6 @@ export const myProjects = [
     desc: "Built a cloud-native image processing pipeline combining Azure Functions, Azure Kubernetes Service (AKS), and KEDA event-driven scaling.",
     subdesc:
       "The system automatically processes uploaded images from Azure Blob Storage, resizes them, and saves them back efficiently — all orchestrated via Docker, GitHub Actions CI/CD, and Service Bus messaging.",
-     href: "https://github.com/ssfawad/Image-Processing-Pipeline",
     source: "https://github.com/ssfawad/Image-Processing-Pipeline",
     logo: "projects/Azpipeline.png",
     logoStyle: {
@@ -261,77 +249,8 @@ export const myProjects = [
   },
 ];
 
-export const workExperiences = [
-  {
-    id: 1,
-    company: "Amazon Web Services",
-    position: "Cloud Support Engineer",
-    duration: "January 2022 – September 2023",
-    icon: "awslogo.png",
-    duties: [
-      "Diagnosed & resolved 100+ critical production incidents for clients across diverse industries",
-      "Cut costs by 70% for Fortune 500 customers via ETL pipeline & SQL tuning",
-      "Mentored 4 new hires, authored KB articles & delivered team workshops",
-      "Consistently surpassed SLA targets and maintained 95%+ CSAT",
-    ],
-  },
-
-  {
-    id: 2,
-    company: "Citi",
-    position: "Application Support Engineer",
-    duration: "August 2021 – December 2021",
-    icon: "citilogo.png",
-    duties: [
-      "Monitored batch jobs & resolved failures to meet SLA commitments",
-      "Performed root‑cause analysis on Linux servers & Oracle DB incidents",
-      "Authored & updated technical documentation and SOPs",
-    ],
-  },
-
-  {
-    id: 3,
-    company: "Dentsply Sirona",
-    position: "Unit Lead",
-    duration: "August 2018 – May 2021",
-    icon: "dentsply.png",
-    duties: [
-      "Trained & managed 30+ technicians, while also driving cross‑department collaboration",
-      "Redesigned production workflow to boost daily throughput by 200%",
-      "Maintained and troubleshot lasers & 3D printers, maintaining 90%+ uptime",
-    ],
-  },
-];
-
 export const socialLinks = [
   { url: "https://github.com/ssfawad" },
   { url: "https://www.linkedin.com/in/syed-fawad/" },
 ];
 
-export const skills = [
-  "Python",
-  "Salesforce",
-  "HTML5",
-  "CSS3",
-  "Node.js",
-  "AWS",
-  "Power BI",
-  "VS Code",
-  "Azure",
-  "Bash",
-  "MySQL",
-  "Tableau",
-  "Spark",
-  "GitHub",
-  "Git",
-  "Apache Airflow",
-  "SQL",
-  "Terraform",
-  "Kubernetes",
-  "Docker",
-  "Postman",
-  "MS Office Suite",
-  "Jenkins",
-  "Jira",
-  "Slack"
-];
