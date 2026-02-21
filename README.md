@@ -1,19 +1,14 @@
-<div align="center"> 
-   <h1>👋 Welcome to My Portfolio Website</h1>
-    </div>
+<div align="center">
+   <h1>Syed Fawad — Cloud Engineer Portfolio</h1>
+</div>
 
 <div align="center">
   <img src="public/logo.png" alt="Logo" width="200" align="right"/>
-   &nbsp;&nbsp;&nbsp;&nbsp;
   <h4>
-    A showcase of my skills, projects, and expertise as a Cloud Engineer.  
-    This website is built using modern web technologies and includes interactive 3D elements to create an engaging experience.
+    A personal portfolio showcasing cloud infrastructure projects, certifications, and engineering work.
   </h4>
   <p>
-    <span style="font-size: 1.2em; font-weight: bold;">🔗 Live Demo:</span>
-         <a href="https://ssfawad.github.io/Portfolio" target="_blank">
-      Syed Fawad
-    </a>
+    🔗 <a href="https://ssfawad.github.io/Portfolio" target="_blank">ssfawad.github.io/Portfolio</a>
   </p>
 </div>
 
@@ -21,79 +16,57 @@
 
 <hr/>
 
-### 🎯 **About This Project**
-A professional portfolio and personal branding site that brings my developer journey to life with interactive 3D elements and smooth animations. It features clean UI/UX and highlights my work and skills through modern web tech.
+### About
+This site serves as a central hub for my cloud engineering work — featuring projects built on GCP, Azure, and AWS, along with professional certifications. The portfolio itself is a static React app deployed to GitHub Pages.
 
-### 🔥 **Key Highlights**
-✅ **3D Interactivity** – Built with **React Three Fiber & Three.js** for immersive 3D experiences.  
-✅ **Performance Optimized** – Fast load times with optimized assets and lazy loading.  
-✅ **Fully Responsive** – Works across desktops, tablets, and mobile devices.  
-✅ **Modern UI/UX** – Styled with **Tailwind CSS** for a clean and professional look.  
-✅ **Easy Navigation** – Smooth scrolling and intuitive layout for better user experience.  
-✅ **Hosted on GitHub Pages** – Easily accessible with continuous deployment.
+### Sections
+- **Hero** – Intro with an interactive 3D scene
+- **Certifications** – Cloud and professional certifications
+- **Projects** – Cloud infrastructure and DevOps projects with live demo and source links
+- **Contact** – Contact form with social links
 
 ---
 
-### 🛠️ **Tech Stack & Tools**
+### Tech Stack
 
 **Frontend:**<br/><br/>
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-<br/><br/>**3D Graphics:**<br/><br/>
+<br/><br/>**3D & Animation:**<br/><br/>
 ![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![React Three Fiber](https://img.shields.io/badge/React%20Three%20Fiber-6e42c1?style=for-the-badge&logo=three.js&logoColor=white)
-![Drei](https://img.shields.io/badge/Drei-4A90E2?style=for-the-badge)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-EF0082?style=for-the-badge&logo=framer&logoColor=white)
 <br/><br/>**Styling:**<br/><br/>
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-<br/><br/>**Build Tool:**<br/><br/>
+<br/><br/>**Build & Deploy:**<br/><br/>
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-<br/><br/>**Code quality and Formatting:**<br/><br/>
-![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
-<br/><br/>**Version Control:**<br/><br/>
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-<br/><br/>**Hosting:**<br/><br/>
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
-### 🚀 Getting Started
-To run this project locally, follow these steps:
+### Running Locally
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) installed
-- Git installed
+```sh
+git clone https://github.com/ssfawad/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
 
-### Installation
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/ssfawad/Portfolio.git
-   cd Portfolio
-   ```
-2. **Install dependencies**
-   ```sh
-   npm install
-   ```
-3. **Run the development server**
-   ```sh
-   npm run dev
-   ```
-### Production Ready
-1. **Run production build**
-   ```sh
-   npm run build
-   ```
+### Deploying
 
-2. Host using Github pages or site of your choice.
+```sh
+npm run build   # outputs to docs/
+git add docs/
+git commit -m "Rebuild docs"
+git push
+```
+
+GitHub Pages is configured to serve from the `docs/` folder on the `main` branch.
 
 ---
 
-### 📜 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-<br/>
-S/O to a-coderr (Anzhelika) for the template
-<br/>
+### License
+MIT — see [LICENSE](LICENSE) for details.
 
