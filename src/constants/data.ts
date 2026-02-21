@@ -23,6 +23,52 @@
 
 export const myProjects = [
   {
+    title: "GCP URL Shortener",
+    desc: "A production-grade URL shortening service deployed on Google Cloud Run with a React frontend, Node.js/Express backend, and PostgreSQL via Cloud SQL.",
+    subdesc:
+      "Infrastructure fully automated with Terraform and deployed via GitHub Actions CI/CD. Features rate limiting, an LRU cache for hot links, and serverless auto-scaling.",
+    href: "https://storage.googleapis.com/urlshortener-488106-urlshortener-frontend/index.html",
+    source: "https://github.com/ssfawad/URLshortener",
+    logo: "projects/urlshortener.png",
+    logoStyle: {
+      backgroundColor: "#1A2B3C",
+      border: "0.2px solid #1A73E8",
+      boxShadow: "0px 0px 60px 0px #1A73E84D",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "icons/react.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "icons/nodejs.png",
+      },
+      {
+        id: 3,
+        name: "Google Cloud",
+        path: "icons/gcp.svg",
+      },
+      {
+        id: 4,
+        name: "Terraform",
+        path: "icons/terraform.svg",
+      },
+      {
+        id: 5,
+        name: "Docker",
+        path: "icons/docker.png",
+      },
+      {
+        id: 6,
+        name: "GitHub Actions",
+        path: "icons/git.png",
+      },
+    ],
+  },
+  {
     title: "Tic-Tac-Toe - Containerized  & CICD",
     desc: "A Tic-Tac-Toe game built with Node.js and WebSockets, containerized using Docker, and deployed to Azure Web Apps using GitHub Actions.",
     subdesc:
