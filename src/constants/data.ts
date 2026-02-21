@@ -70,11 +70,11 @@ export const myProjects = [
   },
   {
     title: "Syed Fawad - Portfolio Website",
-    desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a cloud engineer.",
+    desc: "My Portfolio Website, a showcase of my projects and certifications as a cloud engineer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
     href: "https://ssfawad.github.io/Portfolio/",
-    source: "https://github.com/ssfawad/Portfolio-Website",
+    source: "https://github.com/ssfawad/Portfolio",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
       backgroundColor: "#13202F",
